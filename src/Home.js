@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch, NavLink } from 'react-router-dom';
 import './App.css';
-import Login from '/Login';
-import GetCandy from './GetCandy';
-import Bonbondex from './Bonbondex';
+import Login from './Login';
+import NavBar from './Navbar';
 
 class Home extends Component {
   constructor() {
@@ -12,13 +11,18 @@ class Home extends Component {
 
     }
   }
- 
+
   render() {
     return (
-              <div>
-                <NavLink exact to="/" activeClassName="selected"> Index </NavLink>
-                <NavLink to="/GetCandy" activeClassName="selected"> GetCandy </NavLink>
-              </div>
+      <div className="homePage">
+        <NavBar />
+        <div>
+
+          <NavLink exact to="/" activeClassName="selected"></NavLink>
+          <NavLink to="/GetCandy" activeClassName="selected"></NavLink>
+          <Login />
+        </div>
+      </div>
     );
   }
 }
