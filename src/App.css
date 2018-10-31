@@ -1,35 +1,8 @@
-.App {
-  text-align: center;
+@font-face{
+  font-family: "Halloween Too";
+  src: url("https://www.dafont.com/fr/halloween-too.font");
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .loginForm {
   width: 200px;
   height: 200px;
@@ -37,4 +10,48 @@
 }
 .gagnant {
   font-weight: bold;
+}
+.formulaire {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  min-height: 100vh;
+
+}
+.form{
+  background-color: rgba(250, 250, 250, 0.2);
+  border-radius : 5%;
+  height: 200px;
+  width: 300px;
+  align-content: center;
+}
+.form2{
+  justify-content: center;
+}
+.field{
+  width:250px;
+  justify-content: center;
+}
+.homePage {
+  background-image: url("./images/backgroundhalo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.na{
+  background-color: rgba(250, 3, 3, 0.2);
+  font-family: "Halloween Too";
+  font-size: 2em;
+  color:red;
+}
+.navb{
+  color:red;
+}
+.button{
+  font-family: "Halloween Too";
+  color:red;
+}
+.container{
+
 }
