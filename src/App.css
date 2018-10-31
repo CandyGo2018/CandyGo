@@ -40,7 +40,7 @@
 }
 
 .na{
-  background-color: rgba(250, 3, 3, 0.2);
+  background-color: rgb(0, 0, 0);
   font-family: "Halloween Too";
   font-size: 2em;
   color:white;
@@ -50,6 +50,20 @@
   font-family: "Halloween Too";
   color:red;
 }
-.container{
 
+/* Page Bonbondex */
+
+.bonbondex{
+  background-image: url("./images/fondmap.jpg");
+  background-size: cover;
+  min-height: 1200px;
+}
+
+.title{
+  font-family: "Halloween Too";
+  font-size: 2em;
+  
+}
+.margin{
+  margin-top: 150px;
 }
