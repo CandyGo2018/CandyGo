@@ -30,3 +30,11 @@
     transform: rotate(360deg);
   }
 }
+.loginForm {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+.gagnant {
+  font-weight: bold;
+}

@@ -1,26 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Route, BrowserRouter, Switch, NavLink } from 'react-router-dom';
 import './App.css';
+import Login from './Login';
+import GetCandy from './GetCandy';
+import Bonbondex from './Bonbondex';
+import DisplayCandy from './DisplayCandy';
+import Winner from './Winner';
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+
+    }
+  }
+ 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <BrowserRouter>
+      <div>
+        <NavLink exact to="/" activeClassName="selected"> Home </NavLink>
+        <NavLink to="/GetCandy" activeClassName="selected"> Get Candy </NavLink>
+        <NavLink to="/Bonbondex" activeClassName="selected"> Bonbondex </NavLink>
+        <NavLink to="/DisplayCandy" activeClassName="selected"> DisplayCandy </NavLink>
+        <NavLink to="/Winner" activeClassName="selected"> Winner </NavLink>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route path="/GetCandy" component={GetCandy} />
+          <Route path="/Bonbondex" component={Bonbondex} />
+          <Route path="/DisplayCandy" component={DisplayCandy} />
+          <Route path="/Winner" component={Winner} />
+        </Switch>
       </div>
+    </BrowserRouter>
     );
   }
 }
