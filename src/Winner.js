@@ -12,7 +12,7 @@ class Winner extends Component {
     }
   }
   getWinner=() => {
-  axios('http://localhost:8000/winner').then(res => {
+  axios('http://localhost:8000/api/winner').then(res => {
   //console.log(winner)
   this.setState({
     winner1 : res.data[0].name,

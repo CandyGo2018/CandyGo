@@ -28,7 +28,7 @@ class NavBar extends Component {
         console.log('t',this.props.location)
         return (
             <div>
-                <Navbar className="na" light expand="md">
+                <Navbar className="na" dark expand="md">
                     <NavbarBrand className="nav">Candy Go</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
