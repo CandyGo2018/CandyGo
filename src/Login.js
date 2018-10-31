@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink ,Link} from 'react-router-dom';
 
 class Login extends Component {
   constructor() {
@@ -29,7 +29,7 @@ class Login extends Component {
                   </div>
                 </div>
                 <div className="field ml-4">
-                  <Input type="text" name="name" id="name" placeholder="Json STATHAM" value={this.state.name} onChange={this.handleNameChange} />
+                  <Input type="text" name="name" id="name" placeholder="pseudo" value={this.state.name} onChange={this.handleNameChange} />
                 </div>
               </FormGroup>
             </div>
@@ -47,13 +47,13 @@ class Login extends Component {
               </FormGroup>
             </div>
 
-            <NavLink to='/'>
+            <Link to={{pathname:'/DisplayCandy', state:{name:this.state.name}}}>
               <div className="row justify-content-center">
                 <div className="col-6 offset-3 mt-2">
                   <Button className="button">Submit</Button>
                 </div>
               </div>
-            </NavLink>
+            </Link>
           </Form>
         </div>
       </div>

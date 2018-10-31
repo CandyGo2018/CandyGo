@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+import Navbar from './Navbar';
 
 class DisplayCandy extends Component {
   constructor() {
@@ -33,6 +34,7 @@ class DisplayCandy extends Component {
   render() {
     return (
       <div className="App">
+      <Navbar name={this.props.location.state.name}/>
        <button onClick={this.getCandy}>Get Candy</button>
         <p>{this.state.candyOne}</p>
         <p>{this.state.candyTwo}</p>
