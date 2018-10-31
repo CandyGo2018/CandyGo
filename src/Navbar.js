@@ -8,6 +8,7 @@ import {
     NavItem,
     NavLink,
 } from 'reactstrap';
+ import tete from './tete.png';
 
 class NavBar extends Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class NavBar extends Component {
 
         this.toggle = this.toggle.bind(this);
         this.state = {
-            isOpen: false
+            isOpen: false,
         };
     }
     toggle() {
@@ -24,6 +25,7 @@ class NavBar extends Component {
         });
     }
     render() {
+        console.log('t',this.props.location)
         return (
             <div>
                 <Navbar className="na" light expand="md">
@@ -37,8 +39,9 @@ class NavBar extends Component {
                             <NavItem className="navb">
                                 <NavLink href="/Bonbondex/">Bonbondex</NavLink>
                             </NavItem>
+                            <img src={tete} width="35" height="45" alt="icone"/>
                            <NavItem className="navb">
-                                <NavLink href="/">identifiant</NavLink>
+                            <NavLink className="navbid" href="/">{this.props.name || 'Identifiant'}</NavLink>
                            </NavItem>
                         </Nav>
                     </Collapse>
